@@ -1,0 +1,46 @@
+## ----------------------------------------------------------------------
+## MAKE/include : include makefile for sgml-base
+## ----------------------------------------------------------------------
+
+## ----------------------------------------------------------------------
+## System directory definitions
+prefix		= /usr
+bin_dir		= $(prefix)/bin
+sbin_dir	= $(prefix)/sbin
+share_dir	= $(prefix)/share
+
+## ----------------------------------------------------------------------
+## Local directory definitions
+local_dir	= $(prefix)/local
+local_share_dir	= $(local_dir)/share
+
+## ----------------------------------------------------------------------
+## Manual pages directory definitions
+man_dir		= $(share_dir)/man
+man1_ext	= 1
+man1_dir	= $(man_dir)/man$(man1_ext)
+man8_ext	= 8
+man8_dir	= $(man_dir)/man$(man8_ext)
+
+## ----------------------------------------------------------------------
+## SGML directory definitions
+sgml_dir	= $(share_dir)/sgml
+local_sgml_dir	= $(local_share_dir)/sgml
+
+## ----------------------------------------------------------------------
+## Package directory definitions
+pkg_name	:= sgml-base
+pkg_share_dir	:= $(share_dir)/$(pkg_name)
+
+## ----------------------------------------------------------------------
+## Build definitions
+POD2MAN		= pod2man
+
+## ----------------------------------------------------------------------
+## Install definitions
+INSTALL		= install
+INSTALL_DIR	= $(INSTALL) -m 755 -d
+INSTALL_BIN	= $(INSTALL) -m 755
+INSTALL_FILE	= $(INSTALL) -m 644
+
+## ----------------------------------------------------------------------

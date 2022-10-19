@@ -1,0 +1,5 @@
+Test-Command: install-sgmlcatalog 2>&1 | grep Usage
+Restrictions: needs-root
+
+Test-Command: update-catalog | grep Huh
+Restrictions: needs-root

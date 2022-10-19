@@ -1,0 +1,28 @@
+Source: sgml-base
+Section: text
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Standards-Version: 4.5.0
+Build-Depends: debhelper-compat (= 12)
+Rules-Requires-Root: no
+Vcs-Git: https://salsa.debian.org/debian/sgml-base.git
+Vcs-Browser: https://salsa.debian.org/debian/sgml-base
+
+Package: sgml-base
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Pre-Depends: dpkg (>= 1.16.4)
+Suggests: sgml-base-doc
+Description: SGML infrastructure and SGML catalog file support
+ This package creates the SGML infrastructure directories and provides
+ SGML catalog file support in compliance with the current Debian SGML
+ Policy draft:
+ .
+   * infrastructure directories:
+      - /etc/sgml
+      - /usr/share/sgml/{declaration,dtd,entities,misc,stylesheet}
+      - /usr/share/local/sgml/{declaration,dtd,entities,misc,stylesheet}
+ .
+   * update-catalog(8): tool for maintaining the root SGML catalog
+     file and the package SGML catalog files in the '/etc/sgml' directory.
