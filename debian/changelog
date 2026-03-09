@@ -1,3 +1,23 @@
+sgml-base (1.31+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Drop dependency satisfied since Debian 6 (Closes: #1103335)
+
+ -- Luca Boccassi <bluca@debian.org>  Wed, 16 Apr 2025 13:54:03 +0100
+
+sgml-base (1.31) unstable; urgency=medium
+
+  * QA upload by the Reproducible Builds team.
+  * tools/update-catalog: make sure the catalog is sorted, to support building
+    reproducible rootfs with sgml-base installed, else
+    /var/lib/sgml-base/supercatalog changes on every postinst run. Thanks to
+    Nguyen Thi Huong <huong4.nguyenthi@toshiba.co.jp> for the patch.
+    Closes: #1006646
+  * Simplify preinst and also make sure it doesn't silently fail. Thanks to
+    Ralf Treinen for the patch. Closes: #929706
+
+ -- Holger Levsen <holger@debian.org>  Thu, 06 Oct 2022 20:03:38 +0200
+
 sgml-base (1.30) unstable; urgency=medium
 
   * QA upload.

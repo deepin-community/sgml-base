@@ -12,7 +12,6 @@ Package: sgml-base
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}
-Pre-Depends: dpkg (>= 1.16.4)
 Suggests: sgml-base-doc
 Description: SGML infrastructure and SGML catalog file support
  This package creates the SGML infrastructure directories and provides

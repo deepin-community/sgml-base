@@ -304,6 +304,7 @@ sub update_super
         $catfile = $catdir . "/" . $_;
         check_catalog($catfile) or next;
         push(@cats, $catfile);
+        @cats=sort(@cats);
     }
     closedir(CATDIR)
         or die "cannot close catalog directory $catdir: $!";
